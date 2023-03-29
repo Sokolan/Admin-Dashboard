@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
+    background-color: gray;
+}
+
+.dashboard {
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    background-color: blue;
+}
+
+.user-links{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(50px,100px));
+}
+
+.user-links > li ,
+.system-links > li{
+    display: flex;
+}
+
+.user-links > li > img,
+.system-links > li > img {
+    height: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > *{
+    max-height: 100px;
+}
+
+.dashboard > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row: 1fr 1fr;
+    background-color: aliceblue;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.greeting > .user-icon {
+    align-self: ;
+    grid-row: 1 / 3;
+}
+
+.post-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    padding: 20px;
+    display: grid;
+    gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+}
+
+.project {
+    height: min(300px);
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    background-color: aliceblue;
+}
+
+.view-options{
+    display: flex;
+    height: 2rem;
+    gap: 20px;
+    justify-content: end;
+    padding: 20px;
+}
+
+.news{
+    display: grid;
+    grid-template-rows: 50px 1fr 50px 1fr;
+}
+
+.announced {
+    display: grid;
+    background-color: aliceblue;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+    background-color: aliceblue;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+
+[alt="user-pfp"] {
+    grid-row: 1 / 3;
+    max-height: 50px;
+    align-self: center;
+    justify-self: center;
+}
